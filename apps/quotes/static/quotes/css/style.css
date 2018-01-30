@@ -1,0 +1,202 @@
+/*CSS reset settings here*/
+*{
+ margin: 0px;
+ padding: 0px;
+}
+.wrapper {
+    background-color: cornsilk;
+}
+.sline {
+    width: 815px;
+    height: 1px;
+    border: 1px solid black;
+    margin: 0px;
+    padding: 0px;
+}
+.main {
+    width: 800px;
+    padding: 20px 0px 20px 20px;
+    background-color: cornsilk;
+    display: inline-block;
+    vertical-align: top;
+}
+.header {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-top: 20px;
+    padding-left: 5px;
+    background-color: tan;
+}
+.top_nav {
+    width: 815px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 20px 0px 0px 0px;
+    padding-left: 15px;
+    background-color: tan;
+    display: inline-block;
+    vertical-align: top;
+}
+.top_nav_itm {
+    margin: 0px;
+    padding: 3px 0px 3px 15px;
+    display: inline-block;
+    vertical-align: center;
+}
+.bot_nav{
+    border-top: 1px solid black;
+    padding: 10px;
+}
+.disp_200 {
+    width: 200px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+.disp_300 {
+    width: 300px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+.disp_400 {
+    width: 500px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+.disp_500 {
+    width: 500px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+.disp_msg {
+    width: 490px;
+    padding: 3px;
+    margin-top: 5px;
+    border: 1px solid black;
+}
+.disp_cmt {
+    width: 470px;
+    padding: 3px;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+.alert {
+    padding: 3px;
+    background-color: lightsalmon;
+}
+.reg_ind {
+    margin-top: 20px;
+}
+.btn_blue {
+    background-color: steelblue;
+    margin-top: 10px;
+    width: 60px;
+    height: 25px;
+    color: white;
+}
+.ind_10 {
+    margin: 10px;
+}
+.ind_20 {
+    margin: 20px;
+}
+.ind_30 {
+    margin: 30px;
+}
+.wid_20 {
+    width: 20px;
+    display: inline-block;
+}
+.wid_100 {
+    width: 100px;
+    display: inline-block;
+}
+.wid_150 {
+    width: 150px;
+    display: inline-block;
+}
+.wid_200 {
+    width: 200px;
+    display: inline-block;
+}
+.wid_250 {
+    width: 250px;
+    display: inline-block;
+}
+.wid_300 {
+    width: 30px;
+    display: inline-block;  
+}
+.wid_400 {
+    width: 400px;
+    align-content: top;
+}
+.wid_500 {
+    width: 600px;
+    align-content: top;
+}
+.mrg_500 {
+    margin-left: 500px;
+}
+.mrg_400 {
+    margin-left: 400px;
+}
+.mrg_300 {
+    margin-left: 300px;
+}
+.Black {
+    color: black;
+}
+.gold {
+    background-color: tan;
+}
+.red {
+    color: red;
+}
+.blue {
+    color: blue;
+}
+.green {
+    color: green;
+}
+.btn_green {
+    background-color: green;
+    margin-top: 10px;
+    width: 60px;
+    height: 25px;
+    color: white;
+    display: block;
+}
+.bold {
+    font-weight: bold;
+}
+.itali {
+    font-style: italic;
+}
+p {
+    margin: px;
+    padding: 3px;
+}
+.inline {
+    display: inline-block;
+    vertical-align: top;
+}
+.post_msg{
+    width: 500px;
+    height: 70px;
+    margin-top: 3px;
+    display: block;
+}
+.post_cmt{
+    width: 480px;
+    height: 40px;
+    margin-top: 9px;
+    display: block;
+}

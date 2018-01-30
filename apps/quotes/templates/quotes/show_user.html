@@ -1,0 +1,25 @@
+<!doctype HTML>
+<html>
+<head>
+  <title>Django User Dashboard</title>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'quotes/css/style.css' %}">
+</head>
+<body>
+<div class='top_nav'>
+    <p class='top_nav_itm'><a href='/quotes'> Dashboard </a></p>
+    <p class='top_nav_itm'><a href='/reset'> Logout </a></p>
+</div>
+
+<div class='main'>
+    <h3>Posted by {{ name }} </h3>
+    <h3>Count</h3> {{ cnt }} 
+    <br>
+    {% for q in all_quotes %}   
+    <div class="row">
+      <p class='in20 inline'>{{ q.author }}: </p> <p class='in10 inline'> {{ q.quote }}</a></p>
+    </div>  
+    {% endfor %}
+</div>
+</body>
+</html>

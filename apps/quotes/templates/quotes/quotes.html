@@ -10,36 +10,28 @@
     <h3 class='top_nav_itm'> Welcome, {{ request.session.user }}</h3>
     <p class='top_nav_itm'><a href='/reset'> Logout </a></p>
 </div>
+<div class="error">
+  {% if messages %}
+    {% for msg in messages %}
+      <div class="alert">
+        {{msg.message}}
+      </div>
+    {% endfor %}
+  {% endif %}
+</div> 
 <div class='main'>
   <div class='disp_300'>
   <h3>Quotable Quotes</h3>
-    {% if all_cnt != fav_cnt %}
-      {% for q in all_quotes %} 
-        {% if fav_cnt != 0 %}
-          {% for q1 in favs %}
-            {% if q.id != q1.id %} 
-              <div class="row">
-                <p class='in20'>{{ q.author }}: </p> <p class='in10 inline'> {{ q.quote }}</a></p>
-                <p class='in20'>Posted by <a href="/show_user/{{q.creator.id}}"><span class='italic'>{{ q.creator.name }}</span></a></p> 
-                <form action='/add_fav/{{q.id}}' method='POST'>
-                  {% csrf_token %}
-                  <input type="submit" name="btn" class="btn_blue wid_100" value="Add to My List">
-                </form>
-              </div>  
-            {% endif %}
-          {% endfor %}
-        {% else %}
-        <div class="row">
-            <p class='in20'>{{ q.author }}: </p> <p class='in10 inline'> {{ q.quote }}</a></p>
-            <p class='in20'>Posted by <a href="/show_user/{{q.creator.id}}"><span class='italic'>{{ q.creator.name }}</span></a></p> 
-            <form action='/add_fav/{{q.id}}' method='POST'>
-              {% csrf_token %}
-              <input type="submit" name="btn" class="btn_blue wid_100" value="Add to My List">
-            </form>
-          </div>  
-      {% endif %}
-      {% endfor %}
-    {% endif %}
+    {% for q in all_quotes %} 
+    <div class="row">
+      <p class='in20'>{{ q.author }}: </p> <p class='in10 inline'> {{ q.quote }}</a></p>
+      <p class='in20'>Posted by <a href="/show_user/{{q.creator.id}}"><span class='italic'>{{ q.creator.name }}</span></a></p> 
+      <form action='/add_fav/{{q.id}}' method='POST'>
+        {% csrf_token %}
+        <input type="submit" name="btn" class="btn_blue wid_100" value="Add to My List">
+      </form>
+    </div>  
+    {% endfor %}
   </div>
   <div class="disp_300">
     <h3>Your Favorites</h3>

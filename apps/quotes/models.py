@@ -56,9 +56,13 @@ class QuoteManager(models.Manager):
         print "===  validating quote"
         errors = {}
         if len(q) == 0:
-            errors['quote_length'] = "Error: Book Title cannot be empty"
+            errors['quote_length'] = "Error: Quote cannot be empty"
         else:
-            bk = Quote.objects.get(quote=q)
+            try:
+                bk = Quote.objects.get(quote=q)
+            except Exception as e:
+                return errors
+
             if bk:
                 error['quote_exist'] = "Error: Quote already exist."
         return errors

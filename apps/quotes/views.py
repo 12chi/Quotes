@@ -13,9 +13,9 @@ def index(request):
 def quotes(request):
     print "----QUOTE HOME"
  
-    all_quotes = Quote.objects.all()
- 
     usr = User.objects.get(id=request.session['uid'])
+
+    all_quotes = Quote.objects.exclude(favorite_of_users=usr)
     all_fav = usr.favorite_quotes.all()
 
     all_cnt = all_quotes.count()
@@ -51,6 +51,18 @@ def add_quote(request):
     print request.POST
 
     usr = User.objects.get(id = request.session['uid'])
+
+    errors = Quote.objects.validate_quote(request.POST['quote'])
+
+    print errors
+    if (errors):
+        print "==== errror "
+        print errors
+        for error in errors:
+            messages.error(request, errors[error])
+        print messages
+        return redirect("/quotes")
+    print "===== no errors ==="
 
     qt = Quote.objects.create(quote=request.POST['quote'], author=request.POST['author'], creator=usr)
 

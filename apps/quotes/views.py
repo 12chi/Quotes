@@ -134,7 +134,7 @@ def register(request):
             messages.error(request, "Error: Email has previously used to register another user.  Please use another email.")
             return render(request, "quotes/register.html")
         
-        return redirect('/main')
+        return redirect('/quotes')
     return render(request, "quotes/index.html")
 
 def login(request):
